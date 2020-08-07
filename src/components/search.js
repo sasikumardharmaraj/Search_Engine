@@ -66,12 +66,12 @@ const Search = props => {
                 {images.map((item) => {
                     return(
                     <div className="container">
-                    <img className="imageShow" onClick={(event) => openModal(event)}  key={item.id} src={item.urls.regular} /> 
+                    <img className="imageShow" alt="" onClick={(event) => openModal(event)}  key={item.id} src={item.urls.regular} /> 
                     <div>                        
                     </div>
                     
                     <div className="bottom-left">
-                        <img className="smallImage" src={item.user.profile_image.small}/>
+                        <img className="smallImage" alt="" src={item.user.profile_image.small}/>
                         image by <span className="userNameStyle">{item.user.username}</span> </div>
                     </div>)                
                 })
@@ -85,12 +85,12 @@ const Search = props => {
                 style={customStyles}
             >
                 <div className="container">  
-                <img className="modalimage" src={currentImage} />
+                <img className="modalimage" alt="" src={currentImage} />
                 <a className="top-right" href onClick={closeModal}>X</a>
                 </div>   
                 <div className="contentCenter">
                 <button className="downloadButton">
-                    <a href={currentImage} target="_blank" download={currentImage}>Download</a>
+                    <a href={currentImage} target="_blank" download>Download</a>
                     </button>
                 </div>
             </Modal>
